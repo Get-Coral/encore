@@ -1,4 +1,4 @@
-# coral-module
+# Encore
 
 > A [Coral](https://getcoral.dev) ecosystem module — built on TanStack Start, Tailwind v4, and the Jellyfin API.
 
@@ -60,18 +60,21 @@ pnpm test       # Run tests
 ## Docker
 
 ```bash
-# Build
-docker build -t coral-module .
+# Pull the published image
+docker pull getcoral/encore:latest
+
+# Or build it yourself
+docker build -t encore .
 
 # Run
 docker run -p 3000:3000 \
   -e JELLYFIN_URL=http://your-nas:8096 \
   -e JELLYFIN_API_KEY=your-key \
   -e JELLYFIN_USER_ID=your-user-id \
-  coral-module
+  getcoral/encore:latest
 ```
 
-Published automatically to `ghcr.io/get-coral/<module-name>` on every release via GitHub Actions.
+Published automatically to [`getcoral/encore`](https://hub.docker.com/r/getcoral/encore) on Docker Hub on every release via GitHub Actions.
 
 ---
 
